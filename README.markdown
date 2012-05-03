@@ -6,11 +6,13 @@ Current version of Simple KML is based on [KML 2.2 Standard](https://developers.
 
 ## What is KML?
 
-Following Google introduction page:
+Following [Google introduction page](https://developers.google.com/kml/):
 
 > KML is a file format used to display geographic data in an Earth browser, such as Google Earth, Google Maps, and Google Maps for mobile. You can create KML files to pinpoint locations, add image overlays, and expose rich data in new ways. KML is an international standard maintained by the [Open Geospatial Consortium, Inc. (OGC)](http://www.opengeospatial.org/standards/kml/).
 
 ## Why another parser?
+
+As it is strongly supported by Google, we believe that KML will be widely implemented in the future on Android platform. Android developers should have a comfortable way to integrate KML data in their apps, that's why we built Simple KML.
 
 Simple KML is not the first Java parser for KML. There are a few of them out there but none of them have these capacities:
 - The libary is fully functional on Android
