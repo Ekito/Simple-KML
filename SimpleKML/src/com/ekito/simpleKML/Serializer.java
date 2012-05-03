@@ -15,9 +15,12 @@
  */
 package com.ekito.simpleKML;
 
+import java.io.File;
 import java.io.InputStream;
+import java.io.Reader;
 
 import org.simpleframework.xml.core.Persister;
+import org.simpleframework.xml.stream.InputNode;
 import org.simpleframework.xml.transform.Matcher;
 import org.simpleframework.xml.transform.Transform;
 
@@ -26,22 +29,72 @@ import com.ekito.simpleKML.model.Coordinates;
 import com.ekito.simpleKML.model.Kml;
 
 /**
- * The Serializer interface is used to represent objects that can serialize objects from KML. This exposes one read method that can read from one source (more features are coming).
+ * The Serializer interface is used to represent objects that can serialize objects from KML. This exposes several read method that can read from multiple source (more features are coming).
  */
 public class Serializer {
+	
+	org.simpleframework.xml.Serializer serializer;
+	
+	/**
+	 * Instantiates a new serializer.
+	 */
+	public Serializer() {
+		serializer = new Persister(new KMLMatcher());
+	}
 
 	/**
 	 * This read method will read the contents of the XML document from the provided source and populate the object with the values deserialized.
 	 *
-	 * @param is the is
+	 * @param source the source
 	 * @return the kml
 	 * @throws Exception the exception
 	 */
-	public Kml read(InputStream is) throws Exception {
-		org.simpleframework.xml.Serializer serializer = new Persister(new KMLMatcher());
-		
-		Kml kml = serializer.read(Kml.class, is, false);
-		return kml;
+	public Kml read(File source) throws Exception {
+		return serializer.read(Kml.class, source, false);
+	}
+	
+	/**
+	 * This read method will read the contents of the XML document from the provided source and populate the object with the values deserialized.
+	 *
+	 * @param source the source
+	 * @return the kml
+	 * @throws Exception the exception
+	 */
+	public Kml read(InputNode source) throws Exception {
+		return serializer.read(Kml.class, source, false);
+	}
+	
+	/**
+	 * This read method will read the contents of the XML document from the provided source and populate the object with the values deserialized.
+	 *
+	 * @param source the source
+	 * @return the kml
+	 * @throws Exception the exception
+	 */
+	public Kml read(InputStream source) throws Exception {
+		return serializer.read(Kml.class, source, false);
+	}
+	
+	/**
+	 * This read method will read the contents of the XML document from the provided source and populate the object with the values deserialized.
+	 *
+	 * @param source the source
+	 * @return the kml
+	 * @throws Exception the exception
+	 */
+	public Kml read(Reader source) throws Exception {
+		return serializer.read(Kml.class, source, false);
+	}
+	
+	/**
+	 * This read method will read the contents of the XML document from the provided source and populate the object with the values deserialized.
+	 *
+	 * @param source the source
+	 * @return the kml
+	 * @throws Exception the exception
+	 */
+	public Kml read(String source) throws Exception {
+		return serializer.read(Kml.class, source, false);
 	}
 
 	/**
