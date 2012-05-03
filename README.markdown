@@ -23,9 +23,9 @@ Simple KML is not the first Java parser for KML. There are a few of them out the
 
 Using Simple KML is straightforward. It is based on an Android library project. Import the library project in your eclipse workspace and reference it following [these steps](http://developer.android.com/guide/developing/projects/projects-eclipse.html#ReferencingLibraryProject).
 
-To serialize a KML file, you will need to build an InputStream from it and use this method:
+To serialize a KML file, you will need to build either a File, an InputNode, an InputStream, a Reader or a String from it and use this method:
 
-`kml = kmlSerializer.read(inputStream);`
+`kml = kmlSerializer.read(source);`
 
 ## What's next?
 
