@@ -24,10 +24,10 @@ import java.util.ArrayList;
  * altitude values (optional) are in meters above sea level
  */
 public class Coordinates {
-	
+
 	/** The list. */
 	private ArrayList<Coordinate> list;
-	
+
 	/**
 	 * Instantiates a new coordinates.
 	 *
@@ -35,7 +35,7 @@ public class Coordinates {
 	 */
 	public Coordinates(String raw) {
 		this.list = new ArrayList<Coordinate>();
-		String[] rawPoints = raw.split("\\s+");
+		String[] rawPoints = raw.replaceFirst("\\s+", "").split("\\s+");
 		String[] coords;
 		for (String rawPoint : rawPoints) {
 			coords = rawPoint.split("(?<!\\\\),");
@@ -61,18 +61,18 @@ public class Coordinates {
 	public void setList(ArrayList<Coordinate> list) {
 		this.list = list;
 	}
-	
+
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()
 	 */
 	@Override
 	public String toString() {
-		
+
 		String result = "";
 		for (Coordinate coord : list) {
 			result += coord.toString();
 		}
-		
+
 		return result;
 	}
 }
