@@ -34,6 +34,7 @@ To deserialize an existing Kml Object to an KML output, you'll need to build eit
 ## What's next?
 
 - We know Simple KML is currently at a very early stage and you might find a few issues parsing your KML files. Please post your issues on GitHub to make the project live.
+- Serialization is currently not optimized and might take long time for some cases. We need to improve efficiency.
 - We will work on a solution to easily build UI elements from a KML file.
 
 ## License
