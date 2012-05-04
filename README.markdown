@@ -25,12 +25,15 @@ Using Simple KML is straightforward. It is based on an Android library project. 
 
 To serialize a KML file, you will need to build either a File, an InputNode, an InputStream, a Reader or a String from it and use this method:
 
-`kml = kmlSerializer.read(source);`
+```kml = kmlSerializer.read(source);```
+
+To deserialize an existing Kml Object to an KML output, you'll need to build either a File, an OutputNode, an OutputStream or a Writer and use this method:
+
+```kml = kmlSerializer.read(kml, output);```
 
 ## What's next?
 
 - We know Simple KML is currently at a very early stage and you might find a few issues parsing your KML files. Please post your issues on GitHub to make the project live.
-- Right now, serialization is the only feature provided by Simple KML. In the future, we are going to provide a way to deserialize.
 - We will work on a solution to easily build UI elements from a KML file.
 
 ## License
