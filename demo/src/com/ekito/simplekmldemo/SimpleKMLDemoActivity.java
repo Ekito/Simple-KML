@@ -1,9 +1,11 @@
 package com.ekito.simplekmldemo;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -33,7 +35,8 @@ public class SimpleKMLDemoActivity extends Activity {
     	
 		@Override
 		protected Kml doInBackground(String... params) {
-	        Log.d(TAG, "parsing started");
+	        Log.d(TAG, "read started");
+	        // this will create a Kml class based on the informations described in params[0] (assets/bdx_airsidearea.kml)
 			Kml kml = null;
 	        try {
 	            InputStream is = getResources().getAssets().open(params[0]);
@@ -43,7 +46,19 @@ public class SimpleKMLDemoActivity extends Activity {
 			} catch (Exception e) {
 				Log.e(TAG, e.getMessage());
 			}
-	        Log.d(TAG, "parsing done");
+	        Log.d(TAG, "read done");
+	        
+	        Log.d(TAG, "write started");
+	        // this will output the KML to /data/data/com.ekito.simplekmldemo/example_out.kml
+	        File out = new File(getDir("assets", Context.MODE_PRIVATE), "example_out.kml");
+	        try {
+	        	
+				kmlSerializer.write(kml, out);
+			} catch (Exception e) {
+				Log.e(TAG, e.getMessage());
+			}
+	        Log.d(TAG, "write done");
+	        
 			return kml;
 		}
     	

@@ -61,4 +61,18 @@ public class Coordinates {
 	public void setList(ArrayList<Coordinate> list) {
 		this.list = list;
 	}
+	
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		
+		String result = "";
+		for (Coordinate coord : list) {
+			result += coord.toString();
+		}
+		
+		return result;
+	}
 }

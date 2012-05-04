@@ -113,4 +113,16 @@ public class Coordinate {
 	public void setAltitude(Float altitude) {
 		this.altitude = altitude;
 	}
+	
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		String result = "";
+		result += longitude + "," + latitude;
+		result += altitude == null? "" : ","+altitude;
+		result += " ";
+		return result;
+	}
 }

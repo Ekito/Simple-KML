@@ -17,10 +17,13 @@ package com.ekito.simpleKML;
 
 import java.io.File;
 import java.io.InputStream;
+import java.io.OutputStream;
 import java.io.Reader;
+import java.io.Writer;
 
 import org.simpleframework.xml.core.Persister;
 import org.simpleframework.xml.stream.InputNode;
+import org.simpleframework.xml.stream.OutputNode;
 import org.simpleframework.xml.transform.Matcher;
 import org.simpleframework.xml.transform.Transform;
 
@@ -29,7 +32,7 @@ import com.ekito.simpleKML.model.Coordinates;
 import com.ekito.simpleKML.model.Kml;
 
 /**
- * The Serializer interface is used to represent objects that can serialize objects from KML. This exposes several read method that can read from multiple source (more features are coming).
+ * The Serializer interface is used to represent objects that can serialize and deserialize objects from and to KML. This exposes several read method that can read and write from and to multiple sources.
  */
 public class Serializer {
 	
@@ -95,6 +98,58 @@ public class Serializer {
 	 */
 	public Kml read(String source) throws Exception {
 		return serializer.read(Kml.class, source, false);
+	}
+	
+	/**
+	 * This write method will traverse the provided object checking for field annotations in order to compose the KML data.
+	 *
+	 * @param source the source
+	 * @param out the out
+	 * @return the file
+	 * @throws Exception the exception
+	 */
+	public File write(Kml source, File out) throws Exception {
+		serializer.write(source, out);
+		return out;
+	}
+	
+	/**
+	 * This write method will traverse the provided object checking for field annotations in order to compose the KML data.
+	 *
+	 * @param source the source
+	 * @param out the out
+	 * @return the output node
+	 * @throws Exception the exception
+	 */
+	public OutputNode write(Kml source, OutputNode out) throws Exception {
+		serializer.write(source, out);
+		return out;
+	}
+	
+	/**
+	 * This write method will traverse the provided object checking for field annotations in order to compose the KML data.
+	 *
+	 * @param source the source
+	 * @param out the out
+	 * @return the output stream
+	 * @throws Exception the exception
+	 */
+	public OutputStream write(Kml source, OutputStream out) throws Exception {
+		serializer.write(source, out);
+		return out;
+	}
+	
+	/**
+	 * This write method will traverse the provided object checking for field annotations in order to compose the KML data.
+	 *
+	 * @param source the source
+	 * @param out the out
+	 * @return the writer
+	 * @throws Exception the exception
+	 */
+	public Writer write(Kml source, Writer out) throws Exception {
+		serializer.write(source, out);
+		return out;
 	}
 
 	/**
