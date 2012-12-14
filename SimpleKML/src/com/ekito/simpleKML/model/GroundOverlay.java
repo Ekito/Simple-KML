@@ -25,7 +25,7 @@ public class GroundOverlay extends Overlay {
 
 	/** The altitude. */
 	@Element(required=false)
-	private Float altitude;
+	private Double altitude;
 	
 	/** The altitude mode. */
 	@Element(required=false)
@@ -44,7 +44,7 @@ public class GroundOverlay extends Overlay {
 	 *
 	 * @return the altitude
 	 */
-	public Float getAltitude() {
+	public Double getAltitude() {
 		return altitude;
 	}
 
@@ -53,7 +53,7 @@ public class GroundOverlay extends Overlay {
 	 *
 	 * @param altitude the new altitude
 	 */
-	public void setAltitude(Float altitude) {
+	public void setAltitude(Double altitude) {
 		this.altitude = altitude;
 	}
 

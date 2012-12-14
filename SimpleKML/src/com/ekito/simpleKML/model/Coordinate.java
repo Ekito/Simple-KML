@@ -25,13 +25,13 @@ package com.ekito.simpleKML.model;
 public class Coordinate {
 
 	/** The longitude. */
-	private Float longitude;
+	private Double longitude;
 	
 	/** The latitude. */
-	private Float latitude;
+	private Double latitude;
 	
 	/** The altitude. */
-	private Float altitude;
+	private Double altitude;
 	
 	/**
 	 * Instantiates a new coordinate.
@@ -40,7 +40,7 @@ public class Coordinate {
 	 * @param latitude the latitude
 	 * @param altitude the altitude
 	 */
-	public Coordinate(Float longitude, Float latitude, Float altitude) {
+	public Coordinate(Double longitude, Double latitude, Double altitude) {
 		super();
 		this.longitude = longitude;
 		this.latitude = latitude;
@@ -55,9 +55,9 @@ public class Coordinate {
 	public Coordinate(String raw) {
 		String[] coords;
 		coords = raw.split("(?<!\\\\),");
-		this.longitude = Float.parseFloat(coords[0]);
-		this.latitude = Float.parseFloat(coords[1]);
-		this.altitude = coords.length>2? Float.parseFloat(coords[2]) : null;
+		this.longitude = Double.parseDouble(coords[0]);
+		this.latitude = Double.parseDouble(coords[1]);
+		this.altitude = coords.length>2? Double.parseDouble(coords[2]) : null;
 	}
 
 	/**
@@ -65,7 +65,7 @@ public class Coordinate {
 	 *
 	 * @return the longitude
 	 */
-	public Float getLongitude() {
+	public Double getLongitude() {
 		return longitude;
 	}
 
@@ -74,7 +74,7 @@ public class Coordinate {
 	 *
 	 * @param longitude the new longitude
 	 */
-	public void setLongitude(Float longitude) {
+	public void setLongitude(Double longitude) {
 		this.longitude = longitude;
 	}
 
@@ -83,7 +83,7 @@ public class Coordinate {
 	 *
 	 * @return the latitude
 	 */
-	public Float getLatitude() {
+	public Double getLatitude() {
 		return latitude;
 	}
 
@@ -92,7 +92,7 @@ public class Coordinate {
 	 *
 	 * @param latitude the new latitude
 	 */
-	public void setLatitude(Float latitude) {
+	public void setLatitude(Double latitude) {
 		this.latitude = latitude;
 	}
 
@@ -101,7 +101,7 @@ public class Coordinate {
 	 *
 	 * @return the altitude
 	 */
-	public Float getAltitude() {
+	public Double getAltitude() {
 		return altitude;
 	}
 
@@ -110,7 +110,7 @@ public class Coordinate {
 	 *
 	 * @param altitude the new altitude
 	 */
-	public void setAltitude(Float altitude) {
+	public void setAltitude(Double altitude) {
 		this.altitude = altitude;
 	}
 	
