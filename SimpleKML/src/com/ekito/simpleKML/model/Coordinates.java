@@ -39,8 +39,8 @@ public class Coordinates {
 		String[] coords;
 		for (String rawPoint : rawPoints) {
 			coords = rawPoint.split("(?<!\\\\),");
-			Float altitude = coords.length>2? Float.parseFloat(coords[2]) : null;
-			this.list.add(new Coordinate(Float.parseFloat(coords[0]),Float.parseFloat(coords[1]),altitude));
+			Double altitude = coords.length>2? Double.parseDouble(coords[2]) : null;
+			this.list.add(new Coordinate(Double.parseDouble(coords[0]),Double.parseDouble(coords[1]),altitude));
 		}
 	}
 

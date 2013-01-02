@@ -23,7 +23,7 @@ import org.simpleframework.xml.Element;
  * 
  * If begin or end is missing, then that end of the period is unbounded.
  * 
- * The dateTime is defined according to XML Schema time. The value can be expressed as yyyy-mm-ddThh:mm:sszzzzzz, where T is the separator between the date and the time, and the time zone is either Z (for UTC) or zzzzzz, which represents ±hh:mm in relation to UTC. Additionally, the value can be expressed as a date only.
+ * The dateTime is defined according to XML Schema time. The value can be expressed as yyyy-mm-ddThh:mm:sszzzzzz, where T is the separator between the date and the time, and the time zone is either Z (for UTC) or zzzzzz, which represents hh:mm in relation to UTC. Additionally, the value can be expressed as a date only.
  */
 public class TimeSpan extends TimePrimitive {
 

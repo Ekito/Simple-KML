@@ -24,22 +24,22 @@ public class Location {
 
 	/** The longitude. */
 	@Element
-	private Float longitude;
+	private Double longitude;
 	
 	/** The latitude. */
 	@Element
-	private Float latitude;
+	private Double latitude;
 	
 	/** The altitude. */
 	@Element
-	private Float altitude;
+	private Double altitude;
 
 	/**
 	 * Gets the longitude.
 	 *
 	 * @return the longitude
 	 */
-	public Float getLongitude() {
+	public Double getLongitude() {
 		return longitude;
 	}
 
@@ -48,7 +48,7 @@ public class Location {
 	 *
 	 * @param longitude the new longitude
 	 */
-	public void setLongitude(Float longitude) {
+	public void setLongitude(Double longitude) {
 		this.longitude = longitude;
 	}
 
@@ -57,7 +57,7 @@ public class Location {
 	 *
 	 * @return the latitude
 	 */
-	public Float getLatitude() {
+	public Double getLatitude() {
 		return latitude;
 	}
 
@@ -66,7 +66,7 @@ public class Location {
 	 *
 	 * @param latitude the new latitude
 	 */
-	public void setLatitude(Float latitude) {
+	public void setLatitude(Double latitude) {
 		this.latitude = latitude;
 	}
 
@@ -75,7 +75,7 @@ public class Location {
 	 *
 	 * @return the altitude
 	 */
-	public Float getAltitude() {
+	public Double getAltitude() {
 		return altitude;
 	}
 
@@ -84,7 +84,7 @@ public class Location {
 	 *
 	 * @param altitude the new altitude
 	 */
-	public void setAltitude(Float altitude) {
+	public void setAltitude(Double altitude) {
 		this.altitude = altitude;
 	}
 }

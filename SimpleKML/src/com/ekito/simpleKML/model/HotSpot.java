@@ -18,17 +18,17 @@ package com.ekito.simpleKML.model;
 import org.simpleframework.xml.Attribute;
 
 /**
- * Specifies the position within the Icon that is "anchored" to the {@link Point} specified in the {@link Placemark}. The x and y values can be specified in three different ways: as pixels ("pixels"), as fractions of the icon ("fraction"), or as inset pixels ("insetPixels"), which is an offset in pixels from the upper right corner of the icon. The x and y positions can be specified in different waysÑfor example, x can be in pixels and y can be a fraction. The origin of the coordinate system is in the lower left corner of the icon.
+ * Specifies the position within the Icon that is "anchored" to the {@link Point} specified in the {@link Placemark}. The x and y values can be specified in three different ways: as pixels ("pixels"), as fractions of the icon ("fraction"), or as inset pixels ("insetPixels"), which is an offset in pixels from the upper right corner of the icon. The x and y positions can be specified in different waysï¿½for example, x can be in pixels and y can be a fraction. The origin of the coordinate system is in the lower left corner of the icon.
  */
 public class HotSpot {
 
 	/** The x. */
 	@Attribute(required=false)
-	private Float x;
+	private Double x;
 
 	/** The y. */
 	@Attribute(required=false)
-	private Float y;
+	private Double y;
 
 	/** The xunits. */
 	@Attribute(required=false)
@@ -43,7 +43,7 @@ public class HotSpot {
 	 *
 	 * @return the x
 	 */
-	public Float getX() {
+	public Double getX() {
 		return x;
 	}
 
@@ -52,7 +52,7 @@ public class HotSpot {
 	 *
 	 * @param x the new x
 	 */
-	public void setX(Float x) {
+	public void setX(Double x) {
 		this.x = x;
 	}
 
@@ -61,7 +61,7 @@ public class HotSpot {
 	 *
 	 * @return the y
 	 */
-	public Float getY() {
+	public Double getY() {
 		return y;
 	}
 
@@ -70,7 +70,7 @@ public class HotSpot {
 	 *
 	 * @param y the new y
 	 */
-	public void setY(Float y) {
+	public void setY(Double y) {
 		this.y = y;
 	}
 

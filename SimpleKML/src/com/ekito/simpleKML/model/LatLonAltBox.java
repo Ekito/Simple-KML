@@ -40,11 +40,11 @@ public class LatLonAltBox {
 
 	/** The min altitude. */
 	@Element(required=false)
-	private Float minAltitude;
+	private Double minAltitude;
 
 	/** The max altitude. */
 	@Element(required=false)
-	private Float maxAltitude;
+	private Double maxAltitude;
 
 	/** The altitude mode. */
 	@Element(required=false)
@@ -127,7 +127,7 @@ public class LatLonAltBox {
 	 *
 	 * @return the min altitude
 	 */
-	public Float getMinAltitude() {
+	public Double getMinAltitude() {
 		return minAltitude;
 	}
 
@@ -136,7 +136,7 @@ public class LatLonAltBox {
 	 *
 	 * @param minAltitude the new min altitude
 	 */
-	public void setMinAltitude(Float minAltitude) {
+	public void setMinAltitude(Double minAltitude) {
 		this.minAltitude = minAltitude;
 	}
 
@@ -145,7 +145,7 @@ public class LatLonAltBox {
 	 *
 	 * @return the max altitude
 	 */
-	public Float getMaxAltitude() {
+	public Double getMaxAltitude() {
 		return maxAltitude;
 	}
 
@@ -154,7 +154,7 @@ public class LatLonAltBox {
 	 *
 	 * @param maxAltitude the new max altitude
 	 */
-	public void setMaxAltitude(Float maxAltitude) {
+	public void setMaxAltitude(Double maxAltitude) {
 		this.maxAltitude = maxAltitude;
 	}
 
