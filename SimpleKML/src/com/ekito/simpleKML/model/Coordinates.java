@@ -35,7 +35,7 @@ public class Coordinates {
 	 */
 	public Coordinates(String raw) {
 		this.list = new ArrayList<Coordinate>();
-		String[] rawPoints = raw.replaceFirst("\\s+", "").split("\\s+");
+		String[] rawPoints = raw.replaceFirst("^\\s+", "").split("\\s+");
 		String[] coords;
 		for (String rawPoint : rawPoints) {
 			coords = rawPoint.split("(?<!\\\\),");
