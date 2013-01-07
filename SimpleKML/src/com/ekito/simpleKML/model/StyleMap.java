@@ -15,6 +15,8 @@
  */
 package com.ekito.simpleKML.model;
 
+import java.util.List;
+
 import org.simpleframework.xml.Element;
 
 /**
@@ -22,17 +24,17 @@ import org.simpleframework.xml.Element;
  */
 public class StyleMap extends StyleSelector {
 
-	/** The pair. */
+	/** The pair list. */
 	@Element(name="Pair",required=false)
-	private Pair pair;
+	private List<Pair> pairList;
 
 	/**
 	 * Gets the pair.
 	 *
 	 * @return the pair
 	 */
-	public Pair getPair() {
-		return pair;
+	public List<Pair> getPairList() {
+		return pairList;
 	}
 
 	/**
@@ -40,7 +42,7 @@ public class StyleMap extends StyleSelector {
 	 *
 	 * @param pair the new pair
 	 */
-	public void setPair(Pair pair) {
-		this.pair = pair;
+	public void setPairList(List<Pair> pairList) {
+		this.pairList = pairList;
 	}
 }
