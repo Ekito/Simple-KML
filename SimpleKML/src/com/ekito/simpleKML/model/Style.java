@@ -38,9 +38,9 @@ public class Style extends StyleSelector {
 	@Element(name="PolyStyle",required=false)
 	private PolyStyle polyStyle;
 
-	/** The baloon style. */
-	@Element(name="BaloonStyle",required=false)
-	private BaloonStyle baloonStyle;
+	/** The balloon style. */
+	@Element(name="BalloonStyle",required=false)
+	private BaloonStyle balloonStyle;
 
 	/** The list style. */
 	@Element(name="ListStyle",required=false)
