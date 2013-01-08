@@ -20,7 +20,7 @@ import org.simpleframework.xml.Element;
 /**
  * Specifies how the description balloon for placemarks is drawn. The bgColor, if specified, is used as the background color of the balloon. See {@link Feature} for a diagram illustrating how the default description balloon appears in Google Earth.
  */
-public class BaloonStyle extends ColorStyle {
+public class BalloonStyle extends ColorStyle {
 
 	/** The bg color. */
 	@Element(required=false)

@@ -18,6 +18,7 @@ package com.ekito.simpleKML.model;
 import java.util.List;
 
 import org.simpleframework.xml.Element;
+import org.simpleframework.xml.ElementList;
 
 /**
  * A {@link StyleMap} maps between two different Styles. Typically a {@link StyleMap} element is used to provide separate normal and highlighted styles for a placemark, so that the highlighted version appears when the user mouses over the icon in Google Earth.
@@ -25,7 +26,7 @@ import org.simpleframework.xml.Element;
 public class StyleMap extends StyleSelector {
 
 	/** The pair list. */
-	@Element(name="Pair",required=false)
+	@ElementList(entry="Pair", inline=false, type=Pair.class, required=false)
 	private List<Pair> pairList;
 
 	/**
@@ -34,7 +35,7 @@ public class StyleMap extends StyleSelector {
 	 * @return the pair
 	 */
 	public List<Pair> getPairList() {
-		return pairList;
+		return this.pairList;
 	}
 
 	/**

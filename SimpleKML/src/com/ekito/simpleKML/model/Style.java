@@ -38,9 +38,9 @@ public class Style extends StyleSelector {
 	@Element(name="PolyStyle",required=false)
 	private PolyStyle polyStyle;
 
-	/** The baloon style. */
-	@Element(name="BaloonStyle",required=false)
-	private BaloonStyle baloonStyle;
+	/** The balloon style. */
+	@Element(name="BalloonStyle",required=false)
+	private BalloonStyle balloonStyle;
 
 	/** The list style. */
 	@Element(name="ListStyle",required=false)
@@ -119,21 +119,21 @@ public class Style extends StyleSelector {
 	}
 
 	/**
-	 * Gets the baloon style.
+	 * Gets the balloon style.
 	 *
-	 * @return the baloon style
+	 * @return the balloon style
 	 */
-	public BaloonStyle getBaloonStyle() {
-		return baloonStyle;
+	public BalloonStyle getBalloonStyle() {
+		return balloonStyle;
 	}
 
 	/**
-	 * Sets the baloon style.
+	 * Sets the balloon style.
 	 *
-	 * @param baloonStyle the new baloon style
+	 * @param balloonStyle the new balloon style
 	 */
-	public void setBaloonStyle(BaloonStyle baloonStyle) {
-		this.baloonStyle = baloonStyle;
+	public void setBalloonStyle(BalloonStyle balloonStyle) {
+		this.balloonStyle = balloonStyle;
 	}
 
 	/**
