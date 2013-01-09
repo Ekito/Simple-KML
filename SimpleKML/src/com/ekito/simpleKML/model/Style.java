@@ -28,7 +28,7 @@ public class Style extends StyleSelector {
 	
 	/** The label style. */
 	@Element(name="LabelStyle",required=false)
-	private IconStyle labelStyle;
+	private LabelStyle labelStyle;
 	
 	/** The line style. */
 	@Element(name="LineStyle",required=false)
@@ -69,7 +69,7 @@ public class Style extends StyleSelector {
 	 *
 	 * @return the label style
 	 */
-	public IconStyle getLabelStyle() {
+	public LabelStyle getLabelStyle() {
 		return labelStyle;
 	}
 
@@ -78,7 +78,7 @@ public class Style extends StyleSelector {
 	 *
 	 * @param labelStyle the new label style
 	 */
-	public void setLabelStyle(IconStyle labelStyle) {
+	public void setLabelStyle(LabelStyle labelStyle) {
 		this.labelStyle = labelStyle;
 	}
 
