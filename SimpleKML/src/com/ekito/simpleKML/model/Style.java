@@ -28,7 +28,7 @@ public class Style extends StyleSelector {
 	
 	/** The label style. */
 	@Element(name="LabelStyle",required=false)
-	private IconStyle labelStyle;
+	private LabelStyle labelStyle;
 	
 	/** The line style. */
 	@Element(name="LineStyle",required=false)
