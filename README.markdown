@@ -1,3 +1,7 @@
+# WARNING : THIS PROJECT IS NO LONGER MAINTAINED
+
+Feel free to fork it :-)
+
 # Simple KML - A KML serializer for Android
 
 Simple KML is a library based on [Simple XML framework](http://simple.sourceforge.net/) designed to serialize [KML](https://developers.google.com/kml/) files.
